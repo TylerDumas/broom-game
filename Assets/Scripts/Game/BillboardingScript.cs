@@ -2,21 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BillboardingScript : MonoBehaviour
-{
+public class BillboardingScript : MonoBehaviour {
 
-    public GameObject player;
+    private GameObject player;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
-    void LateUpdate()
-    {
+    void LateUpdate(){
         transform.LookAt(player.transform.position);
-        //transform.forward = Camera.main.transform.forward;
     }
 }
