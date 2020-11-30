@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour
     [Header("Weapons")]
     [SerializeField] GameObject gunRaycast;
     [SerializeField] GameObject gunProjectile;
+    [SerializeField] GameObject meleeWeapon;
     [SerializeField] float shootRange = 40f;
     [SerializeField] float shootRate = 10f;
     [SerializeField] LineRenderer laser;
@@ -43,7 +44,6 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log("Raycast");
         weaponID = 1;
         gunProjectile.SetActive(true);
         gunRaycast.SetActive(false);
@@ -55,21 +55,22 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            Debug.Log("Projectile");
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
             weaponID = 1;
             gunProjectile.SetActive(true);
             gunRaycast.SetActive(false);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
+            meleeWeapon.SetActive(false);
+        }else if (Input.GetKeyDown(KeyCode.Alpha2)) {
             Debug.Log("Raycast");
             weaponID = 2;
             gunProjectile.SetActive(false);
             gunRaycast.SetActive(true);
+            meleeWeapon.SetActive(false);
+        }else if(Input.GetKeyDown(KeyCode.Alpha3)){
+            weaponID = 3;
+            meleeWeapon.SetActive(true);
+            gunProjectile.SetActive(false);
+            gunRaycast.SetActive(false);
         }
 
 

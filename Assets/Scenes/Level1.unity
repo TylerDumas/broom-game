@@ -1840,21 +1840,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6079561482001809177}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1456656153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456656146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9804e68882409aa41a43f46cbfd60825, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyObjectParent: {fileID: 367759221}
-  keyObjectPrefab: {fileID: 4680393082065318854, guid: d081f0f6e284f084384de002e615112f,
-    type: 3}
 --- !u!4 &1471974112 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4282510243656646, guid: 3aa541d38da2cd643aec89b050153446,
@@ -3043,6 +3028,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1823997784}
     m_Modifications:
+    - target: {fileID: 1456656153, guid: 3efd22b3fc6fe3b408d005972aeaa5da, type: 3}
+      propertyPath: keyObjectParent
+      value: 
+      objectReference: {fileID: 367759221}
     - target: {fileID: 4211128391929346358, guid: 3efd22b3fc6fe3b408d005972aeaa5da,
         type: 3}
       propertyPath: laser
